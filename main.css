@@ -20,6 +20,14 @@ width:100%
 .card a {
     text-decoration:none;
 }
+
+.error {
+    position: absolute;
+    top:60px;
+    right:1150px;
+    z-index:8998999;
+    color: rgb(165, 42, 42);
+}
 .search {
     position:absolute;
     top:20px;
@@ -65,6 +73,10 @@ width:100%
   .search
    {
     top:20px;
+    right:30px;
+   }
+   .error {
+    top:60px;
     right:30px;
    }
 }
