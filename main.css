@@ -16,6 +16,10 @@ width:100%
     font-family: 'Courier New', Courier, monospace;
     padding:5px;
 }
+
+.card a {
+    text-decoration:none;
+}
 .search {
     position:absolute;
     top:20px;

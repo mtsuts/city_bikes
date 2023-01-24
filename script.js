@@ -23,8 +23,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 datum.forEach(la => {
     const marker = L.marker([la.location.latitude, la.location.longitude]).addTo(map);
-    marker.bindPopup(`<div class="card"><div class="name"> ${la.name}</div>
-    <div class="country"> ${la.countryName}</div> </div>`)
+    marker.bindPopup(`<div class="card">
+    <a href="https://www.google.com/search?q=${la.name}" target="_blank> 
+    <div class="name"> ${la.name}</div></a>
+    <div class="country"> ${la.countryName}</div> 
+    </div>`)
 });
 
 search.addEventListener('click', function(){
@@ -32,12 +35,11 @@ search.addEventListener('click', function(){
     if (found[0]) {
         map.setView([found[0].location.latitude, found[0].location.longitude], 13);
     } else {
-        alert('There is not city bike in this city or try uppercase first letter');
-        input.value='';
+        `div class="error"> 
+        
+        </div>`
     }
 })
-
-
 
 }catch(err){
     alert(err)
