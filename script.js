@@ -33,6 +33,7 @@ const bikes = async function () {
 
         search.addEventListener('click', function () {
             if (input.value.length >= 3) {
+                error.innerHTML = ''
                 const found = datum.filter(c => c.location.city.toLowerCase().startsWith(input.value.toLowerCase()));
             if (found[0]) {
                 map.setView([found[0].location.latitude, found[0].location.longitude], 10);
