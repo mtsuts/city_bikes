@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+.main-container {
+position:relative;
+width:100%
+}
+
+#map {
+    width:100%;
+    height:100vh;
+}
+
+.card{
+    background-color: rgba(171, 233, 212, 0.344);
+    font-family: 'Courier New', Courier, monospace;
+    padding:5px;
+}
+.search {
+    position:absolute;
+    top:20px;
+    right:1140px;
+    z-index: 8998999;
+}
+.search button {
+    background-color: bisque;
+    border-radius: 5px;
+    border-width: 0;
+    height:30px;  
+    padding:5px;
+}
+.search button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+.search input {
+    height:30px;
+    border-width: 0;
+    border-radius:5px;
+}
+.search input:focus-visible{
+    outline:none;
+}
+.popup-card {
+    background-color: white;
+    border-radius:10px;
+    position:absolute;
+    z-index:8998999;
+    top:500px;
+    right:500px;
+    display:none;
+}
+.popup {
+    padding:10px;
+}
+.popup-show {
+    display:block;
+}
+
+@media(max-width: 576px) {
+  .search
+   {
+    top:20px;
+    right:30px;
+   }
+}
