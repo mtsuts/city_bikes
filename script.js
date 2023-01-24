@@ -3,7 +3,7 @@ const search = document.querySelector('.btn-search')
 const input = document.querySelector('.input')
 
 const bikes = async function(){
-try{ const res = await fetch('http://api.citybik.es/v2/networks')
+try{ const res = await fetch('https://api.citybik.es/v2/networks')
 const data = await res.json();
 
 const dati= data.networks;
