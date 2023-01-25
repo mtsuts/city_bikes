@@ -8,6 +8,7 @@ const bikes = async function () {
         const data = await res.json();
 
         const dati = data.networks;
+
         const datum = dati.map(d => {
             return {
                 ...d,
@@ -15,6 +16,15 @@ const bikes = async function () {
             }
         })
         console.log(datum)
+
+datum.push({
+    company: ["Qari"],
+    countryName:"Georgia",
+    href: '/v2/networks/qari-Tbilisi',
+    id: 'qari-tbilisi',
+    location: {city: 'Tbilisi', country: 'GE', latitude: 41.69, longitude: 44.81},
+    name: "Qari"
+})
 
         const map = L.map('map').setView([30, 0], 2);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -25,7 +35,7 @@ const bikes = async function () {
         datum.forEach(la => {
             const marker = L.marker([la.location.latitude, la.location.longitude]).addTo(map);
             marker.bindPopup(`<div class="card">
-    <a href="https://www.google.com/search?q=${la.name}" target="_blank> 
+    <a href="https://www.google.com/search?q=${la.name} ${la.location.city}" target="_blank> 
     <div class="name"> ${la.name}</div></a>
     <div class="country"> ${la.countryName}</div> 
     </div>`)
