@@ -50,7 +50,7 @@ datum.push({
                 map.setView([found[0].location.latitude, found[0].location.longitude], 7);
             } else {
                 const errorMsg = `<div class="errorMsg"> 
-             No city bikes  found in this city
+             No city bikes  found
         </div>`
                 error.innerHTML = errorMsg;
                 input.value = "";
